@@ -6,6 +6,8 @@ To configure accelerators for your data scientists to use in OpenShift AI, you m
 
 Each GPU node needs to have a proper taint set in order to prevent workloads from being scheduled on them if they don't have specific tolerations. Those tolerations are set in the different accelerator profiles associated to each type of GPU.
 
+![Accelerator Profile](./assets/accelerator-profile.png)
+
 * Taints in the Nodes should be set like this:
 
 ```yaml
