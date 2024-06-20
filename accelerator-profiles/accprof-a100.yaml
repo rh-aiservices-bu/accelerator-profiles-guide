@@ -1,0 +1,13 @@
+apiVersion: dashboard.opendatahub.io/v1
+kind: AcceleratorProfile
+metadata:
+  name: very-large-gpu-card
+  namespace: redhat-ods-applications
+spec:
+  displayName: Very Large GPU Card (A100)
+  enabled: false
+  identifier: nvidia.com/gpu
+  tolerations:
+    - effect: NoSchedule
+      key: nvidia.com/gpu
+      value: NVIDIA-A100-SHARED

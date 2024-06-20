@@ -1,0 +1,13 @@
+apiVersion: dashboard.opendatahub.io/v1
+kind: AcceleratorProfile
+metadata:
+  name: large-gpu-card
+  namespace: redhat-ods-applications
+spec:
+  displayName: Large GPU Card (A10)
+  enabled: true
+  identifier: nvidia.com/gpu
+  tolerations:
+    - effect: NoSchedule
+      key: nvidia.com/gpu
+      value: NVIDIA-A10G-SHARED
